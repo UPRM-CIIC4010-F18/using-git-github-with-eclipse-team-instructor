@@ -29,7 +29,7 @@ public class JobHandler {
 			currentRank = 40;
 		}else if(yearlySalary < 100000){
 			currentRank = 60;
-		}else {
+		}else{
 			currentRank = 80;
 		}
 		
@@ -37,18 +37,21 @@ public class JobHandler {
 		case 0:
 			break;
 		case 1:
-			warningDeRank = 5;
+			warningDeRank += 5;
 			break;
 		case 2:
-			warningDeRank = 10;
+			warningDeRank += 10;
 			break;
 		case 3:
-			warningDeRank = 15;
+			warningDeRank += 15;
 			break;
 		default:
 			warningDeRank = warningTotals*6;
 			break;
+			
+				
 		}
+		
 		return currentRank - warningDeRank;
 	}
 
